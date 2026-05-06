@@ -8,15 +8,24 @@
 ## 🚀 Phase 1A — 즉시 런칭 가능 (1주 이내)
 
 ### 셋업
-- [ ] `otto.kr` 또는 대안 도메인 구매 (가비아·후이즈)
-- [ ] GitHub 저장소 생성 + 코드 푸시
-- [ ] Vercel 프로젝트 생성 + GitHub 연동 + 배포
+- [ ] `otto.kr` 또는 대안 도메인 구매 (가비아·후이즈) ← **다음 작업**
+- [x] GitHub 저장소 생성 + 코드 푸시 (siwoosdev-lab/otto)
+- [x] Vercel 프로젝트 생성 + GitHub 연동 + 배포 (otto-jet.vercel.app)
 - [ ] 도메인 → Vercel 연결 + HTTPS 적용 확인
 
 ### 폼 동작
-- [ ] Tally.so 계정 생성 + 진단 신청 폼 제작 (4개 필드)
-- [ ] `index.html` 폼을 Tally embed로 교체 (또는 폼 제출 → Tally Webhook 연결)
+- [x] Tally.so 진단 신청 폼 (form_id: VLoy9E)
+- [x] `index.html` 폼을 Tally embed로 교체 (dynamicHeight, transparentBackground)
 - [ ] Tally → 대표 이메일 알림 설정 (즉시 알림)
+- [ ] Tally → Slack/Discord 웹훅 (선택)
+
+### SEO·메타 (라이브 적용 완료)
+- [x] OG / Twitter Card 메타 추가
+- [x] canonical URL 설정 (https://otto.kr/)
+- [x] theme-color 추가
+- [x] SVG favicon 추가
+- [ ] 1200x630 PNG OG 이미지 제작 (현재 텍스트 카드만)
+- [ ] apple-touch-icon.png (iOS 홈 화면 추가용)
 
 ### 분석 & 모니터링
 - [ ] Cloudflare Web Analytics 또는 Plausible 설치
