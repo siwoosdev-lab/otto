@@ -4,6 +4,18 @@
 
 AI 기반 업무 자동화 구독 서비스 OttO의 랜딩 페이지 + 운영 인프라.
 
+## 운영 현황
+
+| 항목 | 값 |
+|---|---|
+| 라이브 사이트 | https://otto-jet.vercel.app |
+| 미래 도메인 | https://otto.kr (미연결) |
+| GitHub 저장소 | https://github.com/siwoosdev-lab/otto |
+| 폼 | Tally `VLoy9E` |
+| 단계 | Phase 1 (검증 단계, 0~3개월 차) |
+
+진행 중인 작업과 다음 단계는 [docs/HANDOFF.md](docs/HANDOFF.md) 참조.
+
 ---
 
 ## 빠른 시작 (5분 내 배포)
