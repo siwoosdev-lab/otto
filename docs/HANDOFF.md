@@ -3,14 +3,14 @@
 > 다음 세션에서 이 파일을 먼저 읽고 이어가세요.
 > 매 세션 종료 시 이 문서를 갱신합니다.
 
-**마지막 갱신**: 2026-05-06 (Vercel 이슈 해결 후)
-**현재 상태**: 라이브 배포 정상화. SEO/OG/favicon까지 라이브 반영 완료. 다음 작업 대기 중.
+**마지막 갱신**: 2026-05-06 (개인정보 동의 안내 추가)
+**현재 상태**: 라이브 정상. Tally 알림 동작 확인. 개인정보 수집·이용 안내 박스 추가됨. Vercel Analytics·Tally 동의 체크박스·OG PNG·도메인 대기.
 
 ---
 
 ## 1. 한 줄 현황
 
-`otto-jet.vercel.app` 에 main 최신 commit (`4690177`) 라이브. OG 메타·canonical·theme-color·favicon.svg 모두 라이브 검증 통과.
+`otto-jet.vercel.app` 라이브. Tally 폼 + 알림 동작. 폼 영역에 PIPA 4항목 안내 박스(수집 항목·목적·기간·거부 권리) + privacy.html 링크 강조.
 
 ---
 
@@ -66,25 +66,28 @@
 
 ## 4. 다음 작업 우선순위
 
-### A. 사용자 액션이 필요한 항목
+### 완료
+- [x] **Tally 알림** (이메일 알림 동작 확인)
+- [x] **개인정보 수집·이용 안내 박스** (폼 위에 PIPA 4항목 + privacy 링크)
 
-1. **Tally 알림 설정** — Tally 대시보드 → 폼 → Integrations
-   - Email notification: 대표 메일로 즉시 알림 (없으면 신청 와도 모름, 가장 시급)
-   - 선택: Slack / Discord webhook
-2. **Vercel Web Analytics 활성화** — Vercel 대시보드 → otto 프로젝트 → Analytics 탭 → Enable (무료, Hobby 포함)
-   - 활성화 후 코드에 `<script defer src="/_vercel/insights/script.js"></script>` 삽입 필요 → Claude가 자동 진행 가능
-3. **OG 이미지 (1200x630 PNG)** — 디자인 작업 필요 (Figma/Canva 등)
-   - 현재 텍스트 OG 카드만 — 카카오톡·페북 공유 시 이미지 카드 안 뜸
-   - Claude가 SVG로 임시 생성 가능 (PNG 변환은 별도 도구)
-4. **도메인 `otto.kr` 구매·연결** — 가비아·후이즈 (연 1.5~2만 원) — 사용자 명시: "마지막"
+### 진행 중·대기 (사용자 액션 필요)
 
-### B. Claude가 즉시 자동 진행 가능한 항목
+1. **Tally 폼에 필수 동의 체크박스 추가** — Tally 대시보드 → 폼 편집 → "Multiple Choice" 또는 "Yes/No" 필드 추가
+   - 라벨: `[필수] 개인정보 수집·이용에 동의합니다`
+   - Required: ON
+   - 폼 가장 위 또는 가장 아래에 배치 권장
+   - Tally는 외부 API 미지원 → Claude가 못 함, 사용자만 가능
+2. **Vercel Web Analytics 활성화** — Vercel 대시보드 → otto → Analytics 탭 → Enable
+   - 활성화 끝나면 Claude가 `<script defer src="/_vercel/insights/script.js"></script>` 인젝션
+3. **OG 이미지 (1200x630 PNG)** — 디자인 작업 (Figma/Canva)
+4. **도메인 `otto.kr` 구매·연결** (마지막)
 
-- README.md 라이브 URL/repo URL 반영
-- Vercel Analytics script 인젝션 (사용자가 Vercel 대시보드에서 활성화한 후)
-- apple-touch-icon.svg 추가 (iOS 홈 화면)
-- 임시 OG 이미지 SVG 생성 (PNG 필요한 플랫폼은 못 받지만 Twitter는 SVG OK)
-- vercel.app 도메인 SEO noindex 처리 (도메인 연결 전까지)
+### Privacy 페이지 placeholder 채우기 (사업자 등록 후)
+
+[public/privacy.html](public/privacy.html) 의 다음 항목은 사업자 등록·법무 검토 후 갱신 필요:
+- 시행일 (현재 `2026년 ○월 ○일`)
+- 책임자 이름·연락처 (현재 `○○○`, `010-○○○○-○○○○`)
+- 회사 정식 명칭 (현재 단순히 "OttO")
 
 ---
 
