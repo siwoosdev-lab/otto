@@ -3,14 +3,14 @@
 > 다음 세션에서 이 파일을 먼저 읽고 이어가세요.
 > 매 세션 종료 시 이 문서를 갱신합니다.
 
-**마지막 갱신**: 2026-05-06
-**현재 상태**: 라이브 배포 1차 완료, 두 번째 push의 자동 재배포가 적용 안 됨 (사용자 Vercel 대시보드 확인 대기 중)
+**마지막 갱신**: 2026-05-06 (Vercel 이슈 해결 후)
+**현재 상태**: 라이브 배포 정상화. SEO/OG/favicon까지 라이브 반영 완료. 다음 작업 대기 중.
 
 ---
 
 ## 1. 한 줄 현황
 
-`otto-jet.vercel.app` 에 첫 commit (`d107f0d`) 라이브 중. 두 번째 commit (`90cac19`, SEO·OG·favicon 보강) 은 GitHub에는 push됐으나 Vercel production에 반영 안 됨 — 원인 진단 대기.
+`otto-jet.vercel.app` 에 main 최신 commit (`4690177`) 라이브. OG 메타·canonical·theme-color·favicon.svg 모두 라이브 검증 통과.
 
 ---
 
@@ -46,38 +46,45 @@
 
 ---
 
-## 3. 🚫 지금 막혀있는 것
+## 3. 🚧 지난 이슈 — 해결 완료
 
-### Vercel 자동 재배포 미작동
+### Vercel Hobby Plan의 commit author 차단
 
-두 번째 commit `90cac19` push 후 7시간+ 지났는데도 `otto-jet.vercel.app` edge가 옛 콘텐츠 응답 (etag 그대로, age 26637+).
+`90cac19` push 후 자동 재배포 차단됨. Vercel 대시보드 메시지:
+> "Deployment was blocked because the commit author did not have contributing access. The Hobby Plan does not support collaboration for private repositories."
 
-**진단 가설** (확률 순):
-1. Vercel ↔ GitHub webhook 연결 끊김
-2. 빌드 실패 (Build Logs 미확인)
-3. Production Branch 설정이 `main` 아님
+**원인**: GitHub repo가 Private이었고, commit 메시지의 `Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>` 트레일러를 Vercel이 외부 collaborator로 인식 → Hobby plan 정책상 차단.
 
-**다음 세션 시작 시 사용자에게 확인 부탁할 항목**:
-- Vercel 대시보드 → otto 프로젝트 → **Deployments** 탭
-- 최상단 row의 commit hash와 status
-  - `90cac19` Ready → Promote to Production
-  - `90cac19` Error/Failed → Build Logs 첫 에러
-  - `d107f0d` 한 줄만 → webhook 미수신 (Project Settings → Git → Connected Repo 확인 + Redeploy 강제)
+**해결**: GitHub repo를 **Public으로 전환** (Settings → Danger Zone → Change repository visibility). Public repo는 Vercel Hobby에서 collaboration 제한 없음. 빈 commit (`4690177 Public 전환 후 Vercel 재배포 트리거`) push로 webhook 재트리거 → 15초 만에 새 빌드 라이브.
 
-**우회 옵션**: Deployments 탭 우측 상단 **Redeploy** 버튼 → Use existing Build Cache 해제 → Redeploy
+**향후 권고**:
+- 이 repo는 Public 유지 (콘텐츠 어차피 공개됨, 비밀값 없음)
+- 또는 옵션 C: `git config user.email`을 Vercel 계정 이메일과 일치시키기 (Private 전환 시 필요)
+- Co-Author 트레일러는 Private 전환 시에만 다시 문제. Public 동안은 무관.
 
 ---
 
-## 4. 다음 세션 시작 시 — 어디서 이어갈지
+## 4. 다음 작업 우선순위
 
-1. 위 §3 Vercel 진단 결과 받아서 해결
-2. `90cac19` 라이브 적용 확인 (OG 메타, favicon.svg, 사업자정보 링크 제거 모두 반영)
-3. 그 다음 **Tally 알림 설정** (사용자 액션):
-   - Tally 대시보드 → 폼 → Integrations → Email notification (대표 메일로 즉시 알림)
+### A. 사용자 액션이 필요한 항목
+
+1. **Tally 알림 설정** — Tally 대시보드 → 폼 → Integrations
+   - Email notification: 대표 메일로 즉시 알림 (없으면 신청 와도 모름, 가장 시급)
    - 선택: Slack / Discord webhook
-4. 그 다음 **분석 도구 연결** — Cloudflare Web Analytics 또는 Vercel Analytics (CLAUDE.md §6.3)
-5. 그 다음 **OG 이미지(1200x630 PNG) 제작** — 텍스트 카드만으로는 카카오톡 공유 임팩트 약함
-6. 마지막에 **도메인 `otto.kr` 연결** (사용자가 명시적으로 "도메인은 마지막"이라 함)
+2. **Vercel Web Analytics 활성화** — Vercel 대시보드 → otto 프로젝트 → Analytics 탭 → Enable (무료, Hobby 포함)
+   - 활성화 후 코드에 `<script defer src="/_vercel/insights/script.js"></script>` 삽입 필요 → Claude가 자동 진행 가능
+3. **OG 이미지 (1200x630 PNG)** — 디자인 작업 필요 (Figma/Canva 등)
+   - 현재 텍스트 OG 카드만 — 카카오톡·페북 공유 시 이미지 카드 안 뜸
+   - Claude가 SVG로 임시 생성 가능 (PNG 변환은 별도 도구)
+4. **도메인 `otto.kr` 구매·연결** — 가비아·후이즈 (연 1.5~2만 원) — 사용자 명시: "마지막"
+
+### B. Claude가 즉시 자동 진행 가능한 항목
+
+- README.md 라이브 URL/repo URL 반영
+- Vercel Analytics script 인젝션 (사용자가 Vercel 대시보드에서 활성화한 후)
+- apple-touch-icon.svg 추가 (iOS 홈 화면)
+- 임시 OG 이미지 SVG 생성 (PNG 필요한 플랫폼은 못 받지만 Twitter는 SVG OK)
+- vercel.app 도메인 SEO noindex 처리 (도메인 연결 전까지)
 
 ---
 
