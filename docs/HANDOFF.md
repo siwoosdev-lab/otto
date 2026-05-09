@@ -3,8 +3,8 @@
 > 다음 세션에서 이 파일을 먼저 읽고 이어가세요.
 > 매 세션 종료 시 이 문서를 갱신합니다.
 
-**마지막 갱신**: 2026-05-06 (개인정보 동의 안내 추가)
-**현재 상태**: 라이브 정상. Tally 알림 동작 확인. 개인정보 수집·이용 안내 박스 추가됨. Vercel Analytics·Tally 동의 체크박스·OG PNG·도메인 대기.
+**마지막 갱신**: 2026-05-10 (OG/apple-touch PNG 생성 + Tally 동의 체크박스 완료)
+**현재 상태**: 라이브 정상. Tally 폼 PIPA 필수 동의 체크박스 적용 완료. OG PNG·apple-touch PNG 적용 완료. 남은 액션은 Vercel Analytics 활성화·Tally 알림·도메인.
 
 ---
 
@@ -69,18 +69,15 @@
 ### 완료
 - [x] **Tally 알림** (이메일 알림 동작 확인)
 - [x] **개인정보 수집·이용 안내 박스** (폼 위에 PIPA 4항목 + privacy 링크)
+- [x] **Tally 필수 동의 체크박스** (2026-05-10, 사용자 직접 처리)
+- [x] **OG 이미지 PNG (1200x630)** — Chrome headless로 SVG→PNG 변환, og:image meta 갱신
+- [x] **apple-touch-icon.png (180x180)** — apple-touch-icon.svg 추가 후 Chrome headless 변환, link 갱신
 
 ### 진행 중·대기 (사용자 액션 필요)
 
-1. **Tally 폼에 필수 동의 체크박스 추가** — Tally 대시보드 → 폼 편집 → "Multiple Choice" 또는 "Yes/No" 필드 추가
-   - 라벨: `[필수] 개인정보 수집·이용에 동의합니다`
-   - Required: ON
-   - 폼 가장 위 또는 가장 아래에 배치 권장
-   - Tally는 외부 API 미지원 → Claude가 못 함, 사용자만 가능
-2. **Vercel Web Analytics 활성화** — Vercel 대시보드 → otto → Analytics 탭 → Enable
+1. **Vercel Web Analytics 활성화** — Vercel 대시보드 → otto → Analytics 탭 → Enable
    - 활성화 끝나면 Claude가 `<script defer src="/_vercel/insights/script.js"></script>` 인젝션
-3. **OG 이미지 (1200x630 PNG)** — 디자인 작업 (Figma/Canva)
-4. **도메인 `otto.kr` 구매·연결** (마지막)
+2. **도메인 `otto.kr` 구매·연결** (마지막)
 
 ### Privacy 페이지 placeholder 채우기 (사업자 등록 후)
 

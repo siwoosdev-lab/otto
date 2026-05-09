@@ -16,6 +16,7 @@
 ### 폼 동작
 - [x] Tally.so 진단 신청 폼 (form_id: VLoy9E)
 - [x] `index.html` 폼을 Tally embed로 교체 (dynamicHeight, transparentBackground)
+- [x] Tally 폼 [필수] 개인정보 수집·이용 동의 체크박스 (2026-05-10)
 - [ ] Tally → 대표 이메일 알림 설정 (즉시 알림)
 - [ ] Tally → Slack/Discord 웹훅 (선택)
 
@@ -24,8 +25,8 @@
 - [x] canonical URL 설정 (https://otto.kr/)
 - [x] theme-color 추가
 - [x] SVG favicon 추가
-- [ ] 1200x630 PNG OG 이미지 제작 (현재 텍스트 카드만)
-- [ ] apple-touch-icon.png (iOS 홈 화면 추가용)
+- [x] 1200x630 PNG OG 이미지 제작 (Chrome headless로 SVG→PNG 변환, 2026-05-10)
+- [x] apple-touch-icon.png 180x180 (2026-05-10)
 
 ### 분석 & 모니터링
 - [ ] Cloudflare Web Analytics 또는 Plausible 설치
