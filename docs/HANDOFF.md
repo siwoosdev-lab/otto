@@ -3,8 +3,8 @@
 > 다음 세션에서 이 파일을 먼저 읽고 이어가세요.
 > 매 세션 종료 시 이 문서를 갱신합니다.
 
-**마지막 갱신**: 2026-05-10 (OG/apple-touch PNG 생성 + Tally 동의 체크박스 완료)
-**현재 상태**: 라이브 정상. Tally 폼 PIPA 필수 동의 체크박스 적용 완료. OG PNG·apple-touch PNG 적용 완료. 남은 액션은 Vercel Analytics 활성화·Tally 알림·도메인.
+**마지막 갱신**: 2026-05-11 (사업자 등록 완료 — 널리/Nolly, 약관·방침 정식 사업자 정보 반영)
+**현재 상태**: 라이브 정상. 사업자 등록 완료(275-51-01041). 약관/방침에 정식 회사명·등록번호·소재지 반영. 푸터에 사업자정보 4항목 표시. 남은 액션은 통신판매업 신고(첫 유료 거래 전)·Vercel Analytics·Tally 알림·도메인.
 
 ---
 
@@ -79,12 +79,11 @@
    - 활성화 끝나면 Claude가 `<script defer src="/_vercel/insights/script.js"></script>` 인젝션
 2. **도메인 `otto.kr` 구매·연결** (마지막)
 
-### Privacy 페이지 placeholder 채우기 (사업자 등록 후)
+### Privacy/Terms 추가 갱신 항목 (통신판매업 신고 완료 후)
 
-[public/privacy.html](public/privacy.html) 의 다음 항목은 사업자 등록·법무 검토 후 갱신 필요:
-- 시행일 (현재 `2026년 ○월 ○일`)
-- 책임자 이름·연락처 (현재 `○○○`, `010-○○○○-○○○○`)
-- 회사 정식 명칭 (현재 단순히 "OttO")
+[public/privacy.html](public/privacy.html), [public/terms.html](public/terms.html) 의 다음 항목은 통신판매업 신고 완료 후 갱신:
+- 통신판매업 신고번호 (현재 "추후 신고 예정"으로 표기됨, privacy 상단 회사정보 표 + 푸터 안내)
+- 사업자 등록 외 법무 자문 결과 반영 시점에 §10 면책 표현 등 최종 점검
 
 ---
 

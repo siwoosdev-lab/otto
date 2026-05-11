@@ -56,9 +56,6 @@
   --otto-soft: #dbeafe;
   --otto-bg: #eff6ff;
 
-  --warn: #c2410c;
-  --warn-bg: #fef3c7;
-
   --sans: 'Pretendard Variable', Pretendard, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
 
@@ -1516,6 +1513,16 @@ footer {
   color: var(--muted);
 }
 .footer-links a:hover { color: var(--ink); }
+.footer-business {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--muted-2);
+  line-height: 1.7;
+}
+.footer-business span { white-space: nowrap; }
+.footer-business .sep { margin: 0 8px; color: var(--muted-3); }
 
 /* ==========================================================
    ANIMATIONS
@@ -2420,6 +2427,9 @@ footer {
         <a href="/terms">이용약관</a>
         <a href="/privacy">개인정보처리방침</a>
       </div>
+    </div>
+    <div class="footer-business">
+      <span>널리(Nolly)</span><span class="sep">·</span><span>대표 안시우</span><span class="sep">·</span><span>사업자등록번호 275-51-01041</span><span class="sep">·</span><a href="mailto:siwoosdev@gmail.com" style="color:inherit;">siwoosdev@gmail.com</a>
     </div>
   </div>
 </footer>
