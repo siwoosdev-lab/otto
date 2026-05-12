@@ -8,7 +8,7 @@
 ## 🚀 Phase 1A — 즉시 런칭 가능 (1주 이내)
 
 ### 셋업
-- [ ] `otto.kr` 또는 대안 도메인 구매 (가비아·후이즈) ← **다음 작업**
+- [ ] `nolly.co.kr` 도메인 구매 (가비아·후이즈) ← **다음 작업**
 - [x] GitHub 저장소 생성 + 코드 푸시 (siwoosdev-lab/otto)
 - [x] Vercel 프로젝트 생성 + GitHub 연동 + 배포 (otto-jet.vercel.app)
 - [ ] 도메인 → Vercel 연결 + HTTPS 적용 확인
@@ -22,7 +22,7 @@
 
 ### SEO·메타 (라이브 적용 완료)
 - [x] OG / Twitter Card 메타 추가
-- [x] canonical URL 설정 (https://otto.kr/)
+- [x] canonical URL 설정 (https://nolly.co.kr/)
 - [x] theme-color 추가
 - [x] SVG favicon 추가
 - [x] 1200x630 PNG OG 이미지 제작 (Chrome headless로 SVG→PNG 변환, 2026-05-10)
@@ -35,7 +35,7 @@
 ### 기본 운영 채널
 - [x] 사업자 등록 (널리/Nolly, 275-51-01041, 2026-05-11)
 - [ ] 통신판매업 신고 (첫 유료 거래 발생 전 — 남양주시청 또는 정부24)
-- [ ] Google Workspace 비즈 메일 셋업 (`hello@otto.kr`)
+- [ ] Google Workspace 비즈 메일 셋업 (`hello@nolly.co.kr`)
 - [ ] 카카오 채널 개설 (`@otto`)
 - [ ] 카카오 알림톡 비즈센터 등록 신청 (승인까지 1~2주)
 

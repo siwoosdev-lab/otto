@@ -31,7 +31,7 @@
 - [x] 자체 `<form>` → Tally embed 교체 (form_id `VLoy9E`, dynamicHeight, transparentBackground, hideTitle, alignLeft)
 - [x] 죽은 `handleSubmit` placeholder 함수 제거
 - [x] OG / Twitter Card 메타 일괄 추가 (type, site_name, title, description, url, locale, twitter:card 등)
-- [x] canonical URL 추가 (`https://otto.kr/`) — sitemap·robots와 일관
+- [x] canonical URL 추가 (`https://nolly.co.kr/`) — sitemap·robots와 일관
 - [x] theme-color `#1d4ed8` 추가 (모바일 주소창)
 - [x] `public/favicon.svg` 생성 (OttO 두 원 로고, viewBox 28x28)
 - [x] 푸터 `사업자정보` placeholder 링크 제거 (CLAUDE.md §7.5: 줄이는 방향)
@@ -42,7 +42,7 @@
 - ✅ cleanUrls (`/privacy`, `/terms` 모두 200, `.html` 없이 동작)
 - ✅ Tally embed 마크업 라이브 반영
 - ❌ favicon.ico, og-image.png, apple-touch-icon.png 모두 404 (자산 미생성)
-- ⚠️ robots.txt / sitemap.xml은 `https://otto.kr` 가리킴 (도메인 연결 후 일관됨)
+- ⚠️ robots.txt / sitemap.xml은 `https://nolly.co.kr` 가리킴 (도메인 연결 후 일관됨)
 
 ---
 
@@ -77,7 +77,7 @@
 
 1. **Vercel Web Analytics 활성화** — Vercel 대시보드 → otto → Analytics 탭 → Enable
    - 활성화 끝나면 Claude가 `<script defer src="/_vercel/insights/script.js"></script>` 인젝션
-2. **도메인 `otto.kr` 구매·연결** (마지막)
+2. **도메인 `nolly.co.kr` 구매·연결** (마지막)
 
 ### Privacy/Terms 추가 갱신 항목 (통신판매업 신고 완료 후)
 
@@ -92,12 +92,12 @@
 | 항목 | 값 |
 |---|---|
 | 라이브 URL | https://otto-jet.vercel.app |
-| 미래 도메인 | https://otto.kr (미구매·미연결) |
+| 미래 도메인 | https://nolly.co.kr (미구매·미연결) |
 | GitHub repo | https://github.com/siwoosdev-lab/otto |
 | Vercel 프로젝트 | otto |
 | Tally form_id | VLoy9E (https://tally.so/r/VLoy9E) |
 | Tally embed URL | https://tally.so/embed/VLoy9E |
-| 미래 운영 메일 | hello@otto.kr (미셋업) |
+| 미래 운영 메일 | hello@nolly.co.kr (미셋업) |
 | 카카오 채널 | @otto (미개설) |
 | Phase 1 월 비용 목표 | < ₩14,000 |
 | 디자인 토큰 | CLAUDE.md §3 (코발트 블루 #1d4ed8, Pretendard, Zinc 900 ink) |

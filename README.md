@@ -9,7 +9,7 @@ AI 기반 업무 자동화 구독 서비스 OttO의 랜딩 페이지 + 운영 �
 | 항목 | 값 |
 |---|---|
 | 라이브 사이트 | https://otto-jet.vercel.app |
-| 미래 도메인 | https://otto.kr (미연결) |
+| 미래 도메인 | https://nolly.co.kr (미연결) |
 | GitHub 저장소 | https://github.com/siwoosdev-lab/otto |
 | 폼 | Tally `VLoy9E` |
 | 단계 | Phase 1 (검증 단계, 0~3개월 차) |
@@ -57,9 +57,9 @@ vercel
 
 ### 3. 도메인 연결
 
-1. 가비아·후이즈 등에서 `otto.kr` 구매 (연 1.5~2만 원)
+1. 가비아·후이즈 등에서 `nolly.co.kr` 구매 (연 1.5~2만 원)
 2. Vercel Dashboard → Project → Settings → Domains
-3. `otto.kr` 추가 → 안내 따라 DNS 설정
+3. `nolly.co.kr` 추가 → 안내 따라 DNS 설정
 4. 5~10분 후 HTTPS 자동 적용
 
 ---
@@ -85,7 +85,7 @@ otto/
 | 영역 | 기술 | 비용 |
 |------|------|------|
 | 호스팅 | Vercel Hobby | 0원 |
-| 도메인 | otto.kr (가비아) | 연 ~2만 원 |
+| 도메인 | nolly.co.kr (가비아) | 연 ~2만 원 |
 | 폼 | Tally.so | 0원 |
 | DB | Supabase Free | 0원 |
 | 분석 | Cloudflare Web Analytics | 0원 |
@@ -103,10 +103,10 @@ otto/
 
 ## 라이선스
 
-Proprietary. © 2026 OttO. All rights reserved.
+Proprietary. © 2026 널리(Nolly). All rights reserved.
 
 ## 연락처
 
-- 웹: https://otto.kr
-- 이메일: hello@otto.kr (예정)
+- 웹: https://nolly.co.kr
+- 이메일: hello@nolly.co.kr (예정)
 - 카카오 채널: @otto (예정)

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://otto.kr/sitemap.xml
+Sitemap: https://nolly.co.kr/sitemap.xml

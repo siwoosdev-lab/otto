@@ -261,7 +261,7 @@ git push -u origin main
 # 7. Deploy
 ```
 
-도메인 연결: Vercel Project Settings → Domains → `otto.kr` 추가 → 가비아에서 네임서버를 Vercel로 변경 또는 A 레코드 추가.
+도메인 연결: Vercel Project Settings → Domains → `nolly.co.kr` 추가 → 가비아에서 네임서버를 Vercel로 변경 또는 A 레코드 추가.
 
 ### 6.2 폼 — Tally + Supabase (무료)
 
