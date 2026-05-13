@@ -5,11 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OttO — 반복은 OttO에게, 본업은 사장님께 | AI 업무 자동화 구독 서비스</title>
 <meta name="description" content="학원·병원·음식점·미용실·헬스장... 어떤 업종이든. 매일 반복하는 그 업무, OttO가 진단하고 AI가 자동으로 처리합니다. 30분 무료 진단.">
+<meta name="keywords" content="AI 업무 자동화, 소상공인 자동화, 학원 자동화, 병원 자동화, 음식점 자동화, 카톡 챗봇, 청구서 자동화, 리뷰 자동답변, 예약 알림톡, AI SaaS, 자동화 컨설팅, OttO, 오토, 널리, Nolly">
+<meta name="author" content="널리(Nolly)">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="format-detection" content="telephone=no">
 
 <link rel="canonical" href="https://nolly.co.kr/">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- ============================================================
+     검색엔진 사이트 소유 확인 (등록 후 아래 두 줄의 주석을 풀고
+     content 값에 발급받은 토큰을 붙여넣으세요)
+     ============================================================ -->
+<!-- <meta name="google-site-verification" content="여기에_구글_토큰_붙여넣기"> -->
+<!-- <meta name="naver-site-verification" content="여기에_네이버_토큰_붙여넣기"> -->
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -29,6 +40,62 @@
 <meta name="twitter:title" content="OttO — 반복은 OttO에게">
 <meta name="twitter:description" content="매일 반복하는 그 업무, OttO가 진단하고 AI가 자동으로 처리합니다. 30분 무료 진단.">
 <meta name="twitter:image" content="https://nolly.co.kr/og-image.png">
+
+<!-- ============================================================
+     JSON-LD 구조화 데이터 (Organization + WebSite + Service)
+     Google 리치 결과·지식 패널·네이버 검색 노출 강화
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nolly.co.kr/#organization",
+      "name": "널리",
+      "alternateName": ["Nolly", "널리(Nolly)"],
+      "url": "https://nolly.co.kr/",
+      "logo": "https://nolly.co.kr/apple-touch-icon.png",
+      "email": "siwoosdev@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "KR",
+        "addressRegion": "경기도"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nolly.co.kr/#website",
+      "url": "https://nolly.co.kr/",
+      "name": "OttO",
+      "alternateName": "오토",
+      "description": "반복은 OttO에게, 본업은 사장님께. AI 업무 자동화 구독 서비스.",
+      "publisher": {"@id": "https://nolly.co.kr/#organization"},
+      "inLanguage": "ko-KR"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://nolly.co.kr/#service",
+      "name": "OttO",
+      "serviceType": "AI 업무 자동화 구독 서비스",
+      "description": "학원·병원·음식점·미용실·헬스장 등 직원 1~20명 사업장의 반복 업무를 진단하고 AI로 자동화합니다. 30분 무료 진단 제공.",
+      "provider": {"@id": "https://nolly.co.kr/#organization"},
+      "areaServed": {"@type": "Country", "name": "대한민국"},
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "소상공인, 학원, 병원, 음식점, 미용실, 헬스장"
+      },
+      "offers": {
+        "@type": "Offer",
+        "name": "30분 무료 진단",
+        "price": "0",
+        "priceCurrency": "KRW",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2519,6 +2586,9 @@ footer {
 
 <!-- Tally embed loader -->
 <script async src="https://tally.so/widgets/embed.js"></script>
+
+<!-- Vercel Web Analytics (쿠키리스·GDPR 안전, 무료) -->
+<script defer src="/_vercel/insights/script.js"></script>
 
 </body>
 </html>
